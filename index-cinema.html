@@ -12,12 +12,19 @@
     var ANALYTICS_ENABLED = true;
     if (!ANALYTICS_ENABLED) return;
     if (!location.hostname.endsWith('my-accumulator.com')) return;
-    // Cookiebot first (synchronous) so its auto-blocking can gate trackers until consent
-    document.write('<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0a416b41-1f0d-44e0-8313-e5042317f7e1" data-blockingmode="auto" type="text/javascript"><\/script>');
-    // Google Analytics — auto-blocked by Cookiebot until the visitor accepts cookies
-    document.write('<script async src="https://www.googletagmanager.com/gtag/js?id=G-2END61WVHH"><\/script>');
+    // Google Consent Mode v2 — declare defaults as DENIED *before* any Google tag loads,
+    // so no analytics cookies are written until the visitor accepts via Cookiebot.
     window.dataLayer = window.dataLayer || [];
     window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', functionality_storage: 'granted', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    // Cookiebot loads first; on the visitor's choice it sends gtag('consent','update',…) to GCM.
+    document.write('<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0a416b41-1f0d-44e0-8313-e5042317f7e1" data-blockingmode="auto" type="text/javascript"><\/script>');
+    // Google Analytics — honours the consent state above (no cookies until analytics_storage is granted).
+    document.write('<script async src="https://www.googletagmanager.com/gtag/js?id=G-2END61WVHH"><\/script>');
     gtag('js', new Date());
     gtag('config', 'G-2END61WVHH');
   })();
