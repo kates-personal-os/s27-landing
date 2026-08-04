@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){
+    // Analytics + Cookiebot consent, live on my-accumulator.com. cbid below = Kate's own Cookiebot
+    // domain group (company account was inaccessible). To disable: set ANALYTICS_ENABLED = false.
+    var ANALYTICS_ENABLED = true;
+    if (!ANALYTICS_ENABLED) return;
+    if (!location.hostname.endsWith('my-accumulator.com')) return;
+    // Google Consent Mode v2 — declare defaults as DENIED *before* any Google tag loads,
+    // so no analytics cookies are written until the visitor accepts via Cookiebot.
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+      analytics_storage: 'denied', personalization_storage: 'denied',
+      functionality_storage: 'denied', security_storage: 'granted',
+      wait_for_update: 500
+    });
+    // Cookiebot loads first; on the visitor's choice it sends gtag('consent','update',…) to GCM.
+    document.write('<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0a416b41-1f0d-44e0-8313-e5042317f7e1" data-blockingmode="auto" type="text/javascript"><\/script>');
+    // Google Analytics — honours the consent state above (no cookies until analytics_storage is granted).
+    document.write('<script async src="https://www.googletagmanager.com/gtag/js?id=G-2END61WVHH"><\/script>');
+    gtag('js', new Date());
+    gtag('config', 'G-2END61WVHH');
+  })();
+  </script>
+<meta name="robots" content="noindex, nofollow">
+<title>Cookies Policy — Accumulator Station</title>
+<link rel="icon" type="image/png" href="images/favicon-new.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{ --paper:#0f0c17; --paper-2:#181022; --clay:#eb6d56; --ink:#f6f4fc; --ink-2:#d6d1d8; --ink-soft:#948da8; --line:rgba(214,209,216,.16); }
+*{ box-sizing:border-box; }
+body{ margin:0; background:var(--paper); color:var(--ink-2); font-family:'Manrope',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+a{ color:var(--clay); text-decoration:none; } a:hover{ text-decoration:underline; }
+.lh{ border-bottom:1px solid var(--line); padding:18px 40px; max-width:900px; margin:0 auto; }
+.lh .back{ font-family:'Space Grotesk',sans-serif; font-size:13px; letter-spacing:.06em; color:var(--ink-soft); }
+.lh .back:hover{ color:var(--clay); text-decoration:none; }
+main.legal{ max-width:760px; margin:0 auto; padding:52px 40px 80px; }
+.legal-title{ font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:clamp(2rem,5vw,3rem); letter-spacing:-.02em; color:var(--ink); margin:0 0 6px; }
+.legal-meta{ font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 40px; }
+main.legal h3{ font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:1.15rem; color:var(--ink); margin:38px 0 4px; letter-spacing:-.01em; }
+main.legal h4{ font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:1rem; color:var(--ink); margin:26px 0 2px; }
+main.legal p{ font-size:15px; line-height:1.72; margin:12px 0; }
+main.legal strong{ color:var(--ink); font-weight:600; }
+main.legal ul, main.legal ol{ padding-left:22px; margin:12px 0; } main.legal li{ font-size:15px; line-height:1.7; margin:6px 0; }
+footer.f{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px 26px; padding:30px 40px; max-width:900px; margin:0 auto; font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft); border-top:1px solid var(--line); }
+footer.f .f-right{ display:flex; gap:26px; align-items:center; flex-wrap:wrap; }
+footer.f a{ color:inherit; } footer.f a:hover{ color:var(--clay); text-decoration:none; }
+@media(max-width:560px){ .lh,main.legal,footer.f{ padding-left:22px; padding-right:22px; } }
+</style>
+</head>
+<body>
+<header class="lh"><a class="back" href="./">← Station México 2027</a></header>
+<main class="legal"><h1 class="legal-title">Cookies Policy</h1><p class="legal-meta">Accumulator</p><h3>1. Introduction</h3><p>1.1 Our website utilizes cookies to enhance user experience.</p><p>1.2 We will request your consent for the use of cookies that are not essential for the operation of our website and services when you first visit our website.</p><h3>2. About cookies</h3><p>2.1 A cookie is a small file composed of letters and numbers. It is created by a web server, sent to a web browser, and stored by the browser. Each time the browser requests a page from the server, the identifier from the cookie is sent back to the server.</p><p>2.2 Cookies can be classified as either &quot;persistent&quot; or &quot;session&quot; cookies. A persistent cookie remains in your browser until its expiration date, unless it is deleted earlier by you; a session cookie expires at the end of your browsing session, when the web browser is closed.</p><p>2.3 While cookies themselves do not typically contain information that personally identifies a user, the personal data we store about you may be linked to the information obtained and stored in cookies.</p><h3>3. Cookies that we use</h3><p>3.1 We may use cookies for various purposes to enhance and personalize your experience on our website:</p><p>(a) <strong>authentication and status</strong> – cookies help verify your identity when you visit and navigate our website, and they enable us to check whether you are logged into our site;</p><p>(b) <strong>personalization</strong> – we may use cookies to store information about your preferences and to tailor our website to your specific interests;</p><p>(c) <strong>security</strong> – cookies are an integral part of our security measures. They help protect user accounts from fraudulent access and enhance the overall security of our website and services;</p><p>(d) <strong>advertising</strong> – cookies are utilized to display advertisements that are likely to be of interest to you, enhancing your browsing experience;</p><p>(e) <strong>analysis</strong> – we employ cookies to analyze how our website and services are used, assisting in our efforts to improve performance and functionality</p><p>(f) <strong>cookie consent</strong> – we may use cookies to remember your preferences regarding the use of cookies on our website.</p><h3>4. Cookies used by our service providers</h3><p>4.1 Our service providers utilize cookies, which may be stored on your computer when you visit our website.</p><p>4.2 We may use Google Analytics to gather data on how our website is used, relying on cookies to facilitate this process. The data collected by Google Analytics helps us develop reports on website usage. You can learn more about Google&#x27;s data usage policies by visiting Google&#x27;s partner site policies (<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a>) and reviewing Google&#x27;s privacy policy (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>).</p><h3>5. Managing cookies</h3><p>5.1 Most web browsers offer the option to block and delete cookies. The specific methods to do this can vary depending on the browser and its version.</p><p>5.2 Please note that blocking all cookies can negatively affect the usability of many websites.</p><p>5.3 If you choose to block cookies, you may not be able to access all the functionalities of our website.</p><h3>6. Cookie preferences</h3><p>6.1 You can manage your cookie preferences on our website to ensure that your browsing experience aligns with your personal privacy comfort level.</p><h3>7. Our details</h3><p>7.1 This website is owned and operated by Accumulator Operations LLC. Our correspondence address is 382 NE 191st Street, Suite 99105, Miami, FL 33179-3899, USA.</p><p>7.2 You can contact us directly using our contact information on this website.</p></main>
+<footer class="f"><span>accumulator · station</span><span class="f-right"><a href="terms-of-use.html">Terms of Use</a><a href="privacy-policy.html">Privacy Policy</a><a href="cookies-policy.html">Cookies Policy</a><a href="#" onclick="if(window.Cookiebot){Cookiebot.renew();}return false;">Cookie Settings</a><span>México 2027</span></span></footer>
+</body>
+</html>
